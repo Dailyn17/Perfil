@@ -1,0 +1,96 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #8c20c0df;
+    margin: 20px 30px;
+    padding: 20px 30px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #a0c0b8df;
+    color: #40b0c0df;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos de las secciones */
+section {
+    margin: 20px;
+    padding: 20px;
+    background: #c0c0c0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Títulos */
+h1, h2 {
+    color: #8570c0;
+    text-align: center;
+}
+
+/* Párrafos */
+p {
+    color: #9a40ff;
+}
+
+/* Modelo de caja */
+section {
+    box-sizing: border-box;
+}
+
+/* Estilos del formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+Label {
+    margin-top: 10px;
+}
+
+input, contactForm textarea {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #8570c0;
+    color: #aacaff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#responseMessage {
+    margin-top: 20px;
+    font-size: 16px
+    color: darkblue;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Media queries para diseño responsive */
+@media (max-width: 760px) {
+    section {
+        margin: 10px;
+        padding: 10px;
+        background-color: #aacaff;
+    }
+     form {
+        max-width: 100%;
+    }
+}
+}
