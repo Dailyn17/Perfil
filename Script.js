@@ -1,5 +1,5 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Detener el envÌo del formulario
+    event.preventDefault(); // Detener el env√≠o del formulario
 
     // Obtener los valores de los campos
     const name = document.getElementById('name').value;
@@ -7,29 +7,29 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const message = document.getElementById('message').value;
     const responseMessage = document.getElementById('responseMessage');
 
-    // Validar que los campos no estÈn vacÌos
+    // Validar que los campos no est√©n vac√≠os
     if (name === '' || email === '' || message === '') {
         responseMessage.style.color = 'red';
         responseMessage.textContent = 'Todos los campos son obligatorios.';
         return;
     }
 
-    // Validar el formato del correo electrÛnico
+    // Validar el formato del correo electr√≥nico
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         responseMessage.style.color = 'red';
-        responseMessage.textContent = 'Por favor, ingrese un correo electrÛnico v·lido.';
+        responseMessage.textContent = 'Por favor, ingrese un correo electr√≥nico v√°lido.';
         return;
     }
 
-    // Enviar los datos del formulario a travÈs de una solicitud HTTP POST
+    // Enviar los datos del formulario a trav√©s de una solicitud HTTP POST
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://github.com/Dailyn17/Perfil.git', true);
+    xhr.open('POST', 'https://github.com/Dailyn17/Perfil', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                // Mostrar mensaje de confirmaciÛn
+                // Mostrar mensaje de confirmaci√≥n
                 responseMessage.style.color = 'green';
                 responseMessage.textContent = 'Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.';
                 // Limpiar el formulario
@@ -37,7 +37,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
             } else {
                 // Mostrar mensaje de error
                 responseMessage.style.color = 'red';
-                responseMessage.textContent = 'Hubo un error al enviar tu mensaje. Por favor, intÈntalo de nuevo m·s tarde.';
+                responseMessage.textContent = 'Hubo un error al enviar tu mensaje. Por favor, int√©ntalo de nuevo m√°s tarde.';
             }
         }
     };
